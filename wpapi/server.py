@@ -1,8 +1,8 @@
 import os
 import logging
 
-from app import app
-from weather_services import OpenWeatherMapAPI, FakeWeatherAPI
+from .app import app
+from .weather_services import OpenWeatherMapAPI, FakeWeatherAPI
 
 DEBUG = os.environ.get("FLASK_ENV", "production") == "dev"
 

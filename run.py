@@ -47,4 +47,4 @@ api = getattr(services, args.service)(
     lat=args.latitude, lon=args.longitude, token=token, timeout_sec=args.timeout
 )
 app.register_api(api, url_prefix=None)
-app.run()
+app.run(host="0.0.0.0")

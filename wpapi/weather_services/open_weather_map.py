@@ -40,7 +40,8 @@ class OpenWeatherMapAPI(WeatherAPI):
         token = kwargs.get("token") or os.environ.get("WEATHER_API_TOKEN", None)
         if token is None:
             raise TypeError(
-                "{} require environment variable 'WEATHER_API_TOKEN'".format(
+                "{} require environment variable 'WEATHER_API_TOKEN'\n"
+                "More info: https://openweathermap.org/appid".format(
                     self.__class__.__name__
                 )
             )
