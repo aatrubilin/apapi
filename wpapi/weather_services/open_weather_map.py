@@ -102,7 +102,7 @@ class OpenWeatherMapAPI(WeatherAPI):
         dt = self.data.get("dt")
         if dt is not None:
             tz = tzoffset("", self.data.get("timezone", 0))
-            dt = datetime.fromtimestamp(1568360744, tz).isoformat()
+            dt = datetime.fromtimestamp(dt, tz).isoformat()
         return dt
 
     @property
